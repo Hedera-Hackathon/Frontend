@@ -11,7 +11,7 @@ const Reports = () => {
                 Real World Assets (RWA's)
               </h2>
               <p className="mb-8 font-light lg:text-xl">
-                Chahat turns real-world assets into digital tokens, making aid
+                Nirvik turns real-world assets into digital tokens, making aid
                 distribution a breeze—secure, transparent, and smooth, like
                 turning physical aid into digital magic!
               </p>
@@ -34,7 +34,7 @@ const Reports = () => {
                     ></path>
                   </svg>
                   <span className="text-base font-medium leading-tight text-gray-900 dark:text-white">
-                    Transform real-world assets into digital tokens
+                    Digitalize relief materials as tokens
                   </span>
                 </li>
                 <li className="flex space-x-3">
@@ -51,7 +51,7 @@ const Reports = () => {
                     ></path>
                   </svg>
                   <span className="text-base font-medium leading-tight text-gray-900 dark:text-white">
-                    Simplifies the aid distribution process
+                    Distribute tokens to intended beneficiaries
                   </span>
                 </li>
                 <li className="flex space-x-3">
@@ -68,13 +68,13 @@ const Reports = () => {
                     ></path>
                   </svg>
                   <span className="text-base font-medium leading-tight text-gray-900 dark:text-white">
-                    Efficient transfer of aid
+                    Redeem tokens for relief materials locally
                   </span>
                 </li>
               </ul>
               <p className="mb-8 font-light lg:text-xl">
-                Deliver great service experiences fast - without the complexity
-                of traditional ITSM solutions.
+                Revolutionary Tokenization for Enhanced Relief Material
+                Distribution
               </p>
             </div>
             <img
@@ -86,7 +86,7 @@ const Reports = () => {
           <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
             <img
               className="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex"
-              src="./images/feature-2.png"
+              src="./images/victim.png"
               alt="feature image 2"
             />
             <div className="text-gray-500 sm:text-lg dark:text-gray-400">
@@ -117,7 +117,7 @@ const Reports = () => {
                     ></path>
                   </svg>
                   <span className="text-base font-medium leading-tight text-gray-900 dark:text-white">
-                    Dynamic reports and dashboards
+                    Enhanced Transparency and Security
                   </span>
                 </li>
                 <li className="flex space-x-3">
@@ -134,7 +134,7 @@ const Reports = () => {
                     ></path>
                   </svg>
                   <span className="text-base font-medium leading-tight text-gray-900 dark:text-white">
-                    Templates for everyone
+                    Improved Accountability
                   </span>
                 </li>
                 <li className="flex space-x-3">
@@ -151,7 +151,7 @@ const Reports = () => {
                     ></path>
                   </svg>
                   <span className="text-base font-medium leading-tight text-gray-900 dark:text-white">
-                    Development workflow
+                    Real-time tracking of funds and resources
                   </span>
                 </li>
                 <li className="flex space-x-3">
@@ -168,7 +168,7 @@ const Reports = () => {
                     ></path>
                   </svg>
                   <span className="text-base font-medium leading-tight text-gray-900 dark:text-white">
-                    Limitless business automation
+                    Reduced Fraud
                   </span>
                 </li>
                 <li className="flex space-x-3">
@@ -185,7 +185,7 @@ const Reports = () => {
                     ></path>
                   </svg>
                   <span className="text-base font-medium leading-tight text-gray-900 dark:text-white">
-                    Knowledge management
+                    Automated and self-executing contracts
                   </span>
                 </li>
               </ul>
@@ -201,57 +201,15 @@ const Reports = () => {
         <div className="items-center max-w-screen-xl px-4 py-8 mx-auto lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-24 lg:px-6">
           <div className="col-span-2 mb-8">
             <p className="text-lg font-medium text-purple-600 dark:text-purple-500">
-              Secure & Transparent
+              Accessible to All
             </p>
             <h2 className="mt-3 mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-3xl dark:text-white">
-              Trusted by multiple international organizations.
+              No Blockchain Knowledge? No Problem!
             </h2>
             <p className="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-              Our rigorous security and compliance standards are at the heart of
-              all we do. We work tirelessly to protect you and your customers.
+              Our app is designed for any skill level, ensuring beneficiaries
+              can easily use it without any blockchain knowledge or expertise.
             </p>
-            <div className="pt-6 mt-6 space-y-4 border-t border-gray-200 dark:border-gray-700">
-              <div>
-                <a
-                  href="#"
-                  className="inline-flex items-center text-base font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 dark:hover:text-purple-700"
-                >
-                  Explore Legality Guide
-                  <svg
-                    className="w-5 h-5 ml-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-              <div>
-                <a
-                  href="#"
-                  className="inline-flex items-center text-base font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 dark:hover:text-purple-700"
-                >
-                  Visit the Trust Center
-                  <svg
-                    className="w-5 h-5 ml-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
           </div>
           <div className="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
             <div>
@@ -268,10 +226,10 @@ const Reports = () => {
                 ></path>
               </svg>
               <h3 className="mb-2 text-2xl font-bold dark:text-white">
-                99.99% uptime
+                Fee-Free Transactions
               </h3>
               <p className="font-light text-gray-500 dark:text-gray-400">
-                For Landwind, with zero maintenance downtime
+                Beneficiary Fees Covered via Meta-Transactions
               </p>
             </div>
             <div>
@@ -284,10 +242,10 @@ const Reports = () => {
                 <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
               </svg>
               <h3 className="mb-2 text-2xl font-bold dark:text-white">
-                600M+ Users
+                Unlimited
               </h3>
               <p className="font-light text-gray-500 dark:text-gray-400">
-                Trusted by over 600 milion users around the world
+                Create As Many Beneficiaries as Needed
               </p>
             </div>
             <div>
@@ -304,10 +262,10 @@ const Reports = () => {
                 ></path>
               </svg>
               <h3 className="mb-2 text-2xl font-bold dark:text-white">
-                100+ countries
+                Batch Token Transfer
               </h3>
               <p className="font-light text-gray-500 dark:text-gray-400">
-                Have used Landwind to create functional websites
+                Send tokens to 100 beneficiaries at once
               </p>
             </div>
             <div>
