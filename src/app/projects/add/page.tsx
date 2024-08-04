@@ -1,13 +1,15 @@
 "use client";
 
 import { useAddProject } from "@/services/projects";
-import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 
 const AddProject = () => {
   const addProject = useAddProject();
+  const router = useRouter();
 
   const validationSchema = Yup.object().shape({
     name: Yup.string().required("Project Name is required"),
@@ -37,6 +39,12 @@ const AddProject = () => {
   const onSubmit = async (data) => {
     await addProject.mutateAsync({ ...data, contractAddress: "0x123" });
   };
+
+  useEffect(() => {
+    if (addProject.isSuccess) {
+      router.push("/projects");
+    }
+  }, [addProject.isSuccess, router]);
 
   return (
     <div className='flex justify-center items-center h-screen bg-gray-100'>
@@ -189,6 +197,7 @@ const AddProject = () => {
           <div className='flex justify-end'>
             <button
               type='button'
+              onClick={() => router.push("/projects")}
               className='px-4 py-2 bg-red-500 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 mr-2'>
               Cancel
             </button>
