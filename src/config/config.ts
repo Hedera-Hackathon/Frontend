@@ -1,6 +1,6 @@
 import { defaultWagmiConfig } from "@web3modal/wagmi/react/config";
 import { cookieStorage, createStorage, http } from "wagmi";
-import { mainnet, bscTestnet, sepolia } from "wagmi/chains";
+import { mainnet, bscTestnet, sepolia, hederaTestnet } from "wagmi/chains";
 
 export const projectId = "a8a94eaa29bf7b1d3a0d94172c58e6ac";
 
@@ -14,14 +14,15 @@ const metadata = {
 };
 
 const wagmiConfig = defaultWagmiConfig({
-  chains: [mainnet, sepolia, bscTestnet], // required
-  projectId, // required
-  metadata, // required
+  chains: [mainnet, sepolia, bscTestnet, hederaTestnet], // required
+  projectId,
+  metadata,
   ssr: true,
   transports: {
     [mainnet.id]: http(),
     [sepolia.id]: http(),
     [bscTestnet.id]: http("https://data-seed-prebsc-1-s1.binance.org:8545"),
+    [hederaTestnet.id]: http()
   },
   storage: createStorage({
     storage: cookieStorage,

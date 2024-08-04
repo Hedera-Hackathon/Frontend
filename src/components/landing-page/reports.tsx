@@ -189,10 +189,7 @@ const Reports = () => {
                   </span>
                 </li>
               </ul>
-              <p className="font-light lg:text-xl">
-                Deliver great service experiences fast - without the complexity
-                of traditional ITSM solutions.
-              </p>
+              <p className="font-light lg:text-xl">Great aid experience.</p>
             </div>
           </div>
         </div>
@@ -226,7 +223,7 @@ const Reports = () => {
                 ></path>
               </svg>
               <h3 className="mb-2 text-2xl font-bold dark:text-white">
-                Fee-Free Transactions
+                Fee-Free
               </h3>
               <p className="font-light text-gray-500 dark:text-gray-400">
                 Beneficiary Fees Covered via Meta-Transactions
@@ -262,7 +259,7 @@ const Reports = () => {
                 ></path>
               </svg>
               <h3 className="mb-2 text-2xl font-bold dark:text-white">
-                Batch Token Transfer
+                Batch Transfer
               </h3>
               <p className="font-light text-gray-500 dark:text-gray-400">
                 Send tokens to 100 beneficiaries at once
@@ -278,10 +275,10 @@ const Reports = () => {
                 <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
               </svg>
               <h3 className="mb-2 text-2xl font-bold dark:text-white">
-                5+ Million
+                10k TPS
               </h3>
               <p className="font-light text-gray-500 dark:text-gray-400">
-                Transactions per day
+                10k transaction per seconds
               </p>
             </div>
           </div>
