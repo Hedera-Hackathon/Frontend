@@ -34,9 +34,7 @@ const AddProject = () => {
     resolver: yupResolver(validationSchema),
   });
 
-  console.log("errors", errors);
-
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: any) => {
     await addProject.mutateAsync({ ...data, contractAddress: "0x123" });
   };
 

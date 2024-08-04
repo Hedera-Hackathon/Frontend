@@ -1,0 +1,1 @@
+export const projectContract = '0x59ba4A685543cfbB3C8B0caD3bba758218E46D5e'

@@ -9,5 +9,6 @@ export const endpoints = {
   projects: {
     add: "/projects",
     list: "/projects",
+    single: (uuid: UUID) => `/projects/${uuid}`,
   },
 };

@@ -2,10 +2,11 @@
 
 import { useListProject } from "@/services/projects";
 import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/navigation";
 
 function Projects() {
   const projects = useListProject();
+  const router = useRouter();
 
   return (
     <div className='p-4 bg-gray-100 min-h-screen'>
@@ -19,7 +20,10 @@ function Projects() {
       </div>
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
         {projects.data?.data.map((project: any) => (
-          <div key={project.id} className='bg-white rounded-lg shadow-md p-4'>
+          <div
+            key={project.id}
+            className='bg-white rounded-lg shadow-md p-4 cursor-pointer'
+            onClick={() => router.push(`/projects/${project?.uuid}`)}>
             <div className='relative'>
               <img
                 src={project.imageUrl}
