@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
           <a href="#" className="flex items-center">
             <img
-              src="./images/logos/nirvik_logo_hd.png"
+              src="/images/logos/nirvik_logo_hd.png"
               className="h-6 mr-3 sm:h-9"
               alt="Nirvik Logo"
             />
