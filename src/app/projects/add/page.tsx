@@ -1,16 +1,12 @@
 "use client";
 
-import { useAddProject } from "@/services/projects";
+import { useAddProjectContract } from "@/services/projects";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 
 const AddProject = () => {
-  const addProject = useAddProject();
-  const router = useRouter();
-
   const validationSchema = Yup.object().shape({
     name: Yup.string().required("Project Name is required"),
     tokenName: Yup.string().required("Token Name is required"),
@@ -25,6 +21,7 @@ const AddProject = () => {
     imageUrl: Yup.string().url("Invalid URL"),
     contractAddress: Yup.string(),
   });
+  const router = useRouter();
 
   const {
     register,
@@ -34,21 +31,22 @@ const AddProject = () => {
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmit = async (data: any) => {
-    await addProject.mutateAsync({ ...data, contractAddress: "0x123" });
-  };
+  const createProjectContract = useAddProjectContract();
 
-  useEffect(() => {
-    if (addProject.isSuccess) {
-      router.push("/projects");
-    }
-  }, [addProject.isSuccess, router]);
+  const onSubmit = async (data: any) => {
+    await createProjectContract.mutateAsync(data);
+
+    // await addProject.mutateAsync({ ...data, contractAddress: "0x123" });
+  };
 
   return (
     <div className='flex justify-center items-center h-screen bg-gray-100'>
       <div className='bg-white p-8 rounded-lg shadow-lg w-full max-w-lg'>
         <h2 className='text-2xl font-bold mb-6 text-gray-800'>
-          Project Information
+          Project Information{" "}
+          {createProjectContract.isPending
+            ? "..."
+            : Number(createProjectContract.data) || ""}
         </h2>
 
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -201,6 +199,7 @@ const AddProject = () => {
             </button>
             <button
               type='submit'
+              disabled={createProjectContract.isPending}
               className='px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'>
               Create
             </button>

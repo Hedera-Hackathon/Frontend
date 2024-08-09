@@ -3,9 +3,11 @@ import { useWriteProjectCreateProject } from "@/hooks/contracts/generated/projec
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { api, endpoints } from ".";
 import { UUID } from "crypto";
+import { useContractWrite } from "@/hooks/contracts/generated/custom-contracts/project";
 
-export const useAddProject = () => {
-  const createProject = useWriteProjectCreateProject();
+export const useAddProjectContract = () => {
+  const contract = useContractWrite();
+
   return useMutation({
     mutationFn: async ({
       name,
@@ -20,8 +22,8 @@ export const useAddProject = () => {
       imageUrl: string;
       tokenQuantity: string;
     }) => {
-      return createProject.writeContractAsync({
-        address: projectContract,
+      return contract.mutate({
+        functionName: "createProject",
         args: [name, tokenName, tokenSymbol],
       });
     },

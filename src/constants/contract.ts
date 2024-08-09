@@ -1,1 +1,1 @@
-export const projectContract = '0x59ba4A685543cfbB3C8B0caD3bba758218E46D5e'
+export const projectContract = '0xb9dd52b3dCbaAFffE44767c8E142772DD2EE4af6'

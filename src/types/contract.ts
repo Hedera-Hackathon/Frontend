@@ -1,0 +1,1 @@
+export type ContractWrite = "addBeneficiary" | "addVendor" | "createProject"
