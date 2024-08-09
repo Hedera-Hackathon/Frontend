@@ -1,17 +1,16 @@
 "use client";
 
-import { useAddProject } from "@/services/projects";
-import React, { useEffect } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-import { useWriteProjectCreateProject } from "@/hooks/contracts/generated/project";
-import { projectContract } from "@/constants/contract";
+import {
+  useContractRead,
+  useContractWrite,
+} from "@/hooks/contracts/generated/custom-contracts/project";
+import { useReadProjectGetProject } from "@/hooks/contracts/generated/project";
 
 const AddProject = () => {
-  const addProject = useAddProject();
-  const addProjectToChain = useWriteProjectCreateProject();
-
   const validationSchema = Yup.object().shape({
     name: Yup.string().required("Project Name is required"),
     tokenName: Yup.string().required("Token Name is required"),
@@ -35,19 +34,32 @@ const AddProject = () => {
     resolver: yupResolver(validationSchema),
   });
 
+  const contract = useContractWrite();
+
   const onSubmit = async (data: any) => {
-    await addProjectToChain.writeContractAsync({
-      address: projectContract,
-      args: ["sushant", "sushsant", "SUS"],
+    contract.mutate({
+      functionName: "createProject",
+      args: ["asdf", "adsfa", "adsfasd"],
     });
-    await addProject.mutateAsync({ ...data, contractAddress: "0x123" });
+
+    // await addProject.mutateAsync({ ...data, contractAddress: "0x123" });
   };
+
+  const { data, isPending } = useContractRead("getProjectCount");
+
+  const {
+    data: allProjecData,
+    isPending: allProjectIsPending,
+    error,
+  } = useContractRead("getProject", [BigInt(0)]);
+
+  console.log(allProjecData, allProjectIsPending, error, "is all project data");
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
         <h2 className="text-2xl font-bold mb-6 text-gray-800">
-          Project Information
+          Project Information {isPending ? "..." : Number(data) || ""}
         </h2>
 
         <form onSubmit={handleSubmit(onSubmit)}>
